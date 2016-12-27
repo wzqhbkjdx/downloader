@@ -85,6 +85,7 @@ public class Downloader {
             }
             fos.flush();
             is.close();
+            handler.downloadComplete();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -98,8 +99,6 @@ public class Downloader {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            handler.downloadComplete();
 
         }
 
